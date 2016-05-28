@@ -6,86 +6,154 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
 		<title>快递助手</title>
 		<link rel="stylesheet" href="css/mui.min.css" />
+		<style type="text/css">
+			#menu .title {
+				margin: 25px 15px 10px;
+				color: #7A7A7A;
+			}
+			
+			.mui-off-canvas-left, .mui-off-canvas-right {
+				background: #EFEFF4;
+			}
+			.mytableview{
+				padding: 20px 0px!important;
+			}
+			
+		</style>
 	</head>
 
 	<body>
-		<!--底部导航栏-->
-		<nav class="mui-bar mui-bar-tab">
-			<a class="mui-tab-item mui-active" id="page_index">
-				<span class="mui-icon mui-icon-home"></span>
-				<span class="mui-tab-label">首页</span>
-			</a>
 
-			<a class="mui-tab-item" id="page_info">
-				<span class="mui-icon mui-icon-chatboxes"></span>
-				<span class="mui-tab-label">资讯</span>
-			</a>
-			<a class="mui-tab-item" id="page_contact">
-				<span class="mui-icon mui-icon-phone"></span>
-				<span class="mui-tab-label">联系</span>
-			</a>
-
-		</nav>
-		<!--底部导航栏-->
-
-		<!--内容区域-->
-		<div class="mui-content">
-			<!--图片轮播-->
-			<div class="mui-slider">
-
-				<div class="mui-slider-group mui-slider-loop">
-					<!--支持循环，需要重复图片节点-->
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img src="img/lunbo3.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img src="img/lunbo1.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img src="img/lunbo2.jpg" /></a>
-					</div>
-					<div class="mui-slider-item">
-						<a href="#"><img src="img/lunbo3.jpg" /></a>
-					</div>
-					<!--支持循环，需要重复图片节点-->
-					<div class="mui-slider-item mui-slider-item-duplicate">
-						<a href="#"><img src="img/lunbo1.jpg" /></a>
+		<!--侧滑菜单-->
+		<div class="mui-off-canvas-wrap mui-draggable">
+			<!-- 菜单容器 -->
+			<aside class="mui-off-canvas-left" id="menu">
+				<div class="mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 菜单具体展示内容 -->
+						<!--<div class="title">侧滑导航</div>-->
+						<!--头像-->
+						<ul class="mui-table-view mytableview" >
+							<li class="mui-table-view-cell mui-media">
+								<a href="#" >
+									<img class="mui-media-object mui-pull-left" src="img/touxiang.jpg">
+									<div class="mui-media-body">
+										爸爸
+										<p class="mui-ellipsis">快递小哥</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+						<!--头像-->
+						<!--菜单列表-->
+						<ul class="mui-table-view">
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right" href="#">个人订单
+									<span class="mui-badge mui-badge-primary">1</span>
+								</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">待开发</a>
+							</li>
+							<li class="mui-table-view-cell">
+								<a class="mui-navigate-right">待开发</a>
+							</li>
+						</ul>
+						<!--菜单列表-->
+						<!-- 菜单具体展示内容 -->
 					</div>
 				</div>
-				<!--导航项-->
-				<div class="mui-slider-indicator">
-					<div class="mui-indicator mui-active"></div>
-					<div class="mui-indicator"></div>
-					<div class="mui-indicator"></div>
+			</aside>
+			<!-- 主页面容器 -->
+			<div class="mui-inner-wrap">
+				<!--底部导航栏-->
+				<nav class="mui-bar mui-bar-tab">
+					<a class="mui-tab-item mui-active" id="page_index">
+						<span class="mui-icon mui-icon-home"></span>
+						<span class="mui-tab-label">首页</span>
+					</a>
+					<a class="mui-tab-item" id="page_jianyi">
+						<span class="mui-icon mui-icon-phone"></span>
+						<span class="mui-tab-label">投诉建议</span>
+					</a>
 
+				</nav>
+				<!--底部导航栏-->
+				<div class="mui-content mui-scroll-wrapper">
+					<div class="mui-scroll">
+						<!-- 主界面具体展示内容 -->
+
+						<!--内容区域-->
+						<div class="mui-content">
+							<!--图片轮播-->
+							<div class="mui-slider">
+
+								<div class="mui-slider-group mui-slider-loop">
+									<!--支持循环，需要重复图片节点-->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a ><img src="img/lunbo3.jpg" /></a>
+									</div>
+									<div class="mui-slider-item">
+										<a ><img src="img/lunbo1.jpg" /></a>
+									</div>
+									<div class="mui-slider-item">
+										<a ><img src="img/lunbo2.jpg" /></a>
+									</div>
+									<div class="mui-slider-item">
+										<a ><img src="img/lunbo3.jpg" /></a>
+									</div>
+									<!--支持循环，需要重复图片节点-->
+									<div class="mui-slider-item mui-slider-item-duplicate">
+										<a ><img src="img/lunbo1.jpg" /></a>
+									</div>
+								</div>
+								<!--导航项-->
+								<div class="mui-slider-indicator">
+									<div class="mui-indicator mui-active"></div>
+									<div class="mui-indicator"></div>
+									<div class="mui-indicator"></div>
+
+								</div>
+							</div>
+							<!--图片轮播-->
+							<!--九宫格-->
+							<ul class="mui-table-view mui-grid-view mui-grid-9">
+								<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3" id="page_inform">
+									<a href="inform.html">
+										<span class="mui-icon mui-icon-chatbubble"></span>
+										<div class="mui-media-body">通知公告</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3" id="page_express">
+									<a href="express.html">
+										<span class="mui-icon mui-icon-personadd"></span>
+										<div class="mui-media-body">帮我拿快递</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-2 mui-col-sm-3" id="page_expressHelpOther">
+									<a href="expressHelpOther.html">
+										<span class="mui-icon mui-icon-paperplane"></span>
+										<div class="mui-media-body">我要帮别人</div>
+									</a>
+								</li>
+								<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3" id="page_courier">
+									<a href="courier.html">
+										<span class="mui-icon mui-icon-flag"></span>
+										<div class="mui-media-body">成为快递员</div>
+									</a>
+								</li>
+
+							</ul>
+							<!--九宫格-->
+						</div>
+						<!--内容区域-->
+						<!-- 主界面具体展示内容 -->
+					</div>
 				</div>
 			</div>
-			<!--图片轮播-->
-			<!--九宫格-->
-			<ul class="mui-table-view mui-grid-view mui-grid-9">
-				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					<a href="express.html">
-						<span class="mui-icon mui-icon-paperplane"></span>
-						<div class="mui-media-body">帮拿快递</div>
-					</a>
-				</li>
-				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					<a href="express_add.html">
-						<span class="mui-icon mui-icon-flag"></span>
-						<div class="mui-media-body">自取快递</div>
-					</a>
-				</li>
-
-				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
-					<a href="http://www.baidu.com">
-						<span class="mui-icon mui-icon-more"></span>
-						<div class="mui-media-body">更多</div>
-					</a>
-				</li>
-
-			</ul>
-			<!--九宫格-->
 		</div>
+		<!--侧滑菜单-->
+
 		<script src="js/mui.min.js"></script>
 		<script type="text/javascript" charset="utf-8">
 			mui.init();
@@ -96,24 +164,46 @@
 			});
 			//tap为mui封装的单击事件
 			document.getElementById('page_index').addEventListener('tap', function() {
-				//打开关于页面
+				//打开首页页面
 				mui.openWindow({
 					url: 'index.html',
 					id: 'index'
 				});
 			});
-			document.getElementById('page_info').addEventListener('tap', function() {
-				//打开关于页面
+			document.getElementById('page_jianyi').addEventListener('tap', function() {
+				//打开建议页面
 				mui.openWindow({
-					url: 'info.html',
-					id: 'info'
+					url: 'suggestion.html',
+					id: 'suggestion'
 				});
 			});
-			document.getElementById('page_contact').addEventListener('tap', function() {
-				//打开关于页面
+			
+			document.getElementById('page_inform').addEventListener('tap', function() {
+				//打开通知公告页面
 				mui.openWindow({
-					url: 'contact.html',
-					id: 'contact'
+					url: 'inform.html',
+					id: 'inform'
+				});
+			});
+			document.getElementById('page_express').addEventListener('tap', function() {
+				//打开通知公告页面
+				mui.openWindow({
+					url: 'express.html',
+					id: 'express'
+				});
+			});
+			document.getElementById('page_expressHelpOther').addEventListener('tap', function() {
+				//打开通知公告页面
+				mui.openWindow({
+					url: 'expressHelpOther.html',
+					id: 'expressHelpOther'
+				});
+			});
+			document.getElementById('page_courier').addEventListener('tap', function() {
+				//打开通知公告页面
+				mui.openWindow({
+					url: 'courier.html',
+					id: 'courier'
 				});
 			});
 		</script>

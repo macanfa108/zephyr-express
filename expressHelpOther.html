@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+
+		<link href="css/mui.min.css" rel="stylesheet" />
+		<style type="text/css">
+			.select-area {
+				border: 1px solid #ccc !important;
+				/*padding-left: 10px;*/
+				color: #A9A9A9;
+			}
+		</style>
+	</head>
+
+	<body>
+		<!--底部导航栏-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" id="page_index">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" id="page_jianyi">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">投诉建议</span>
+			</a>
+
+		</nav>
+		<!--底部导航栏-->
+		<!--主体内容-->
+		<div class="mui-content-padded">
+			<!--表单筛选-->
+			<form action="#" method="post">
+				<select class="select-area" name="quyu">
+					<option value="区域">区域</option>
+					<option value="东区">东区</option>
+					<option value="中区">中区</option>
+					<option value="西区">西区</option>
+					<option value="其他">其他</option>
+				</select>
+				<select class="select-area" name="gongsi">
+					<option value="快递公司">快递公司</option>
+					<option value="顺丰">顺丰</option>
+					<option value="中通">中通</option>
+					<option value="圆通">圆通</option>
+					<option value="韵达">韵达</option>
+				</select>
+				<select class="select-area" name="sex">
+					<option value="不限">不限</option>
+					<option value="男">男</option>
+					<option value="女">女</option>
+				</select>
+			</form>
+			<!--信息列表-->
+			<ul class="mui-table-view">
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<!--超出两行文字才省略-->
+						<h4 class="mui-ellipsis-2">顺丰快递</h4>
+						<!--超出一行文字才省略-->
+						<h5 class="mui-ellipsis ">海花A101</h5>
+						<p class="mui-h6 mui-ellipsis">时间：2016-5-28 9：00-21：30</p>
+						<span class="mui-badge mui-badge-primary">男</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<!--超出两行文字才省略-->
+						<h4 class="mui-ellipsis-2">韵达快递</h4>
+						<!--超出一行文字才省略-->
+						<h5 class="mui-ellipsis ">海花B101</h5>
+						<p class="mui-h6 mui-ellipsis">时间：2016-6-28 9：00-21：30</p>
+						<span class="mui-badge mui-badge-primary">女</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<!--超出两行文字才省略-->
+						<h4 class="mui-ellipsis-2">韵达快递</h4>
+						<!--超出一行文字才省略-->
+						<h5 class="mui-ellipsis ">海花B101</h5>
+						<p class="mui-h6 mui-ellipsis">时间：2016-6-28 9：00-21：30</p>
+						<span class="mui-badge mui-badge-primary">男</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<!--超出两行文字才省略-->
+						<h4 class="mui-ellipsis-2">韵达快递</h4>
+						<!--超出一行文字才省略-->
+						<h5 class="mui-ellipsis ">海花B101</h5>
+						<p class="mui-h6 mui-ellipsis">时间：2016-6-28 9：00-21：30</p>
+						<span class="mui-badge mui-badge-primary">女</span>
+					</a>
+				</li>
+				<li class="mui-table-view-cell">
+					<a class="mui-navigate-right">
+						<!--超出两行文字才省略-->
+						<h4 class="mui-ellipsis-2">韵达快递</h4>
+						<!--超出一行文字才省略-->
+						<h5 class="mui-ellipsis ">海花B101</h5>
+						<p class="mui-h6 mui-ellipsis">时间：2016-6-28 9：00-21：30</p>
+						<span class="mui-badge mui-badge-primary">男</span>
+					</a>
+				</li>
+				
+			</ul>
+			<!--信息列表-->
+		</div>
+		<!--主体内容-->
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+			//tap为mui封装的单击事件
+			document.getElementById('page_index').addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'index.html',
+					id: 'index'
+				});
+			});
+			
+			document.getElementById('page_jianyi').addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'suggestion.html',
+					id: 'suggestion'
+				});
+			});
+		</script>
+	</body>
+
+</html>

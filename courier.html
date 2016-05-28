@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>成为快递员</title>
+		<link href="css/mui.min.css" rel="stylesheet" />
+
+	</head>
+
+	<body>
+		<!--底部导航栏-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" id="page_index">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" id="page_jianyi">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">投诉建议</span>
+			</a>
+
+		</nav>
+		<!--底部导航栏-->
+		<!--内容区域-->
+		<div class="mui-content-padded">
+			<!--快递员表单-->
+			<form action="#" method="post">
+				<div class="mui-input-row">
+					<input type="text" class="mui-input-clear" placeholder="请输入姓名" name="userName">
+				</div>
+				<div class="mui-input-row">
+					<input type="number" class="mui-input-clear" placeholder="请输入学号" name="student_num">
+				</div>
+				<div class="mui-input-row">
+					<input type="text" class="mui-input-clear" name="grades" id="grades" placeholder="班级：计科1121" />
+				</div>
+				<div class="mui-input-row">
+					<input type="number" class="mui-input-clear" name="IDCard" id="IDCard" placeholder="请输入身份证号码" />
+				</div>
+				<div class="mui-input-row">
+					<input type="text" class="mui-input-clear" name="dormitory" id="dormitory" placeholder="请输入宿舍（海花A101）" />
+				</div><div class="mui-input-row">
+					<input type="text" class="mui-input-clear" name="referee" id="referee" placeholder="请输入推荐人" />
+				</div>
+			</form>
+			<!--快递员表单-->
+		</div>
+		<script src="js/mui.min.js"></script>
+		<script type="text/javascript" charset="UTF-8">
+			mui.init();
+			//tap为mui封装的单击事件
+			document.getElementById('page_index').addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'index.html',
+					id: 'index'
+				});
+			});
+			
+			document.getElementById('page_jianyi').addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'suggestion.html',
+					id: 'suggestion'
+				});
+			});
+		</script>
+	</body>
+
+</html>

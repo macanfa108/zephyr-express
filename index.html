@@ -48,7 +48,7 @@
 						<!--菜单列表-->
 						<ul class="mui-table-view">
 							<li class="mui-table-view-cell">
-								<a class="mui-navigate-right" href="#">个人订单
+								<a class="mui-navigate-right"  id='page_order'>个人订单
 									<span class="mui-badge mui-badge-primary">1</span>
 								</a>
 							</li>
@@ -204,6 +204,14 @@
 				mui.openWindow({
 					url: 'courier.html',
 					id: 'courier'
+				});
+			});
+			//打开个人订单页面
+			document.getElementById('page_order').addEventListener('tap', function() {
+				//打开通知公告页面
+				mui.openWindow({
+					url: 'order.html',
+					id: 'order'
 				});
 			});
 		</script>

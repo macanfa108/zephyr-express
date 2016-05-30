@@ -130,6 +130,19 @@
 					id: 'suggestion'
 				});
 			});
+			//弹出消息框
+			mui(".mui-table-view").on('tap','.mui-table-view-cell',function(e){
+				var btnArray = ['确定', '取消'];
+				mui.confirm('请问你确认接单吗？', '是否接单？', btnArray, function(e) {
+					if (e.index == 0) {
+						mui.alert('接单成功！','接单通知');
+					} else {
+						mui.alert('接单取消！','接单通知');
+					}
+				})
+			});
+			
+			
 		</script>
 	</body>
 

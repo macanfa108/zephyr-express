@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title>个人订单</title>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+</head>
+<body>
+	<!--底部导航栏-->
+		<nav class="mui-bar mui-bar-tab">
+			<a class="mui-tab-item mui-active" id="page_index">
+				<span class="mui-icon mui-icon-home"></span>
+				<span class="mui-tab-label">首页</span>
+			</a>
+			<a class="mui-tab-item" id="page_jianyi">
+				<span class="mui-icon mui-icon-phone"></span>
+				<span class="mui-tab-label">投诉建议</span>
+			</a>
+
+		</nav>
+		<!--底部导航栏-->
+	<!--选项卡内容-->
+		<div class="mui-slider">
+		    <div class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+		        <a class="mui-control-item" href="#item1">我发起的请求</a>
+		        <a class="mui-control-item" href="#item2">我进行的代取</a>
+		    </div>
+		    <div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-6"></div>
+		    <div class="mui-slider-group">
+		        <div id="item1" class="mui-slider-item mui-control-content mui-active">
+		            <ul class="mui-table-view">
+		                <li class="mui-table-view-cell">完成时间：<time>2016-5-30</time></li>
+		                <li class="mui-table-view-cell">帮助的人：王尼玛</li>
+		                <li class="mui-table-view-cell">帮助的人的地址：海花B101</li>
+		            </ul>
+		        </div>
+		        <div id="item2mobile" class="mui-slider-item mui-control-content">
+		            <ul class="mui-table-view">
+		                <li class="mui-table-view-cell">完成时间：<time>2016-6-1</time></li>
+		                <li class="mui-table-view-cell">帮助的人：你大爷</li>
+		                <li class="mui-table-view-cell">帮助的人的地址：海思A101</li>
+		            </ul>
+		        </div>
+		    </div>
+		</div>
+	<!--选项卡内容-->
+	<script src="js/mui.min.js"></script>
+	<script type="text/javascript" charset="UTF-8">
+      	mui.init();
+      	//tap为mui封装的单击事件
+			document.getElementById('page_index').addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'index.html',
+					id: 'index'
+				});
+			});
+			
+			document.getElementById('page_jianyi').addEventListener('tap', function() {
+				//打开关于页面
+				mui.openWindow({
+					url: 'suggestion.html',
+					id: 'suggestion'
+				});
+			});
+    </script>
+</body>
+</html>
